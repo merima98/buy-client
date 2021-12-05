@@ -34,23 +34,7 @@ export const getError = createSelector(
 )
 export const productReducer = createReducer<ProductState>(
     initialState,
-    // on(ProductActions.showProducts, (state, action): ProductState => {
-    //     console.log('Original state is, ', state);
-    //     return {
-    //         ...state,
-    //         products: action.products
-    //     };
-    // }),
-    // on(ProductActions.initializeProducts, (state): ProductState => {
-    //     console.log('Original state is, ', state);
-    //     return {
-    //         ...state,
-    //         products: []
-    //     };
-    // }),
-
     on(ProductActions.loadProductsSuccess, (state, action): ProductState => {
-        console.log('Original state is, ', action.products);
         return {
             ...state,
             products: action.products,

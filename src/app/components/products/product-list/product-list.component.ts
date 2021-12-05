@@ -19,16 +19,7 @@ export class ProductListComponent implements OnInit {
   constructor(private store: Store<State>) { }
 
   ngOnInit(): void {
-    //TODO unsubscribe
-    // this.store.select(getShowProducts).subscribe(
-    //   products=>{
-    //     this.products = products;
-    //     console.log('Here are my products, ', this.products);
-    //   }
-    // )
     this.errorMessage$ = this.store.select(getError)
-
-    console.log('Evo me u komponenti');
     this.products$ = this.store.select(getShowProducts);
     this.store.dispatch(ProductActions.loadProducts());
   }
