@@ -14,6 +14,4 @@ export interface Product {
     totalAvailableProducts: number;
     conditionId: string;
     categoryId: string;
-    //   category!: Category;
-    //   condition!: Condition;
 }

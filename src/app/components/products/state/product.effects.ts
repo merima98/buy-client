@@ -23,5 +23,16 @@ export class ProductEfffects {
                         catchError(error => of(ProductActions.loadProductsFailure({ error })))
                     ))
             ));
+    });
+
+    loadProduct$ = createEffect(()=>{
+        return this.actions$.pipe(
+            ofType(ProductActions.loadProduct),
+            mergeMap((action)=>this.productService.getProductById(action.productId)
+            .pipe(
+                map((product)=>ProductActions.loadProductSuccess({product})),
+                catchError(error=>of(ProductActions.loadProductFailure({error})))
+            ))
+        )
     })
 }

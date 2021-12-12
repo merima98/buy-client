@@ -11,7 +11,8 @@ import { EffectsModule } from '@ngrx/effects';
 import { ProductEfffects } from './state/product.effects';
 
 const productsRoutes: Routes = [
-  {path: '', component: ProductListComponent}
+  { path: '', component: ProductListComponent},
+  { path: ':productId', component: ProductComponent }
 ]
 
 

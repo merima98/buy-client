@@ -23,5 +23,4 @@ export class ProductListComponent implements OnInit {
     this.products$ = this.store.select(getShowProducts);
     this.store.dispatch(ProductActions.loadProducts());
   }
-
 }

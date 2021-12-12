@@ -5,17 +5,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
-import { ProductListComponent } from './components/products/product-list/product-list.component';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { EffectsModule } from '@ngrx/effects';
-// import { ProductComponent } from './components/products/product/product.component';
 
 @NgModule({
   declarations: [
-    AppComponent//,
-    // ProductListComponent//,
-    // ProductComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,

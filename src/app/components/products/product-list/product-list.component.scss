@@ -1,0 +1,34 @@
+.wrapper {
+    display: flex;
+}
+
+.left-container {
+    width: 10%;
+    background-color: green;
+}
+
+.container {
+    margin: 0 auto;
+    background-color: red;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.right-container {
+    width: 10%;
+    background-color: yellow;
+}
+
+.styled-product {
+    display: flex;
+    flex-direction: column;
+}
+
+.styled-image {
+    height: auto;
+    width: 50vw;
+}
