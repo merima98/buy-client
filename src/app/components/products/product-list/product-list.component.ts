@@ -23,4 +23,10 @@ export class ProductListComponent implements OnInit {
     this.products$ = this.store.select(getShowProducts);
     this.store.dispatch(ProductActions.loadProducts());
   }
+
+  isStateNew(conditionId: string) {
+
+    return conditionId === 'cfc99ff0-a8a4-4547-b173-f9ce0d79444b';
+
+  }
 }
